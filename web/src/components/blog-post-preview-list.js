@@ -5,6 +5,7 @@ import BlogPostPreview from './blog-post-preview'
 import styles from './blog-post-preview-list.module.css'
 
 function BlogPostPreviewGrid (props) {
+  debugger
   return (
     <div className={styles.root}>
       {props.title && <h2 className={styles.headline}>{props.title}</h2>}
@@ -12,7 +13,7 @@ function BlogPostPreviewGrid (props) {
         {props.nodes &&
           props.nodes.map(node => (
             <li key={node.id}>
-              <BlogPostPreview {...node} isInList />
+              <p>{node.title}</p>
             </li>
           ))}
       </ul>
